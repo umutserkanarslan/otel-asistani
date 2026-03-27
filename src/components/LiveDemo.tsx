@@ -42,11 +42,11 @@ export default function LiveDemo() {
       <div className="relative z-10 mx-auto max-w-[1200px] px-6">
         {/* Section Title */}
         <motion.h2
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
-          className="mb-14 text-center font-[family-name:var(--font-heading)] text-3xl font-extrabold text-white md:text-[40px]"
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.3 }}
+          className="mb-14 text-center font-[family-name:var(--font-heading)] text-3xl font-extrabold text-white md:text-[40px] will-change-transform"
         >
           Gerçek Bir Sohbeti İzleyin
         </motion.h2>
@@ -55,11 +55,11 @@ export default function LiveDemo() {
         <div className="flex flex-col items-center gap-6 md:flex-row md:items-stretch md:gap-0">
           {/* LEFT — WhatsApp Chat */}
           <motion.div
-            initial={{ opacity: 0, x: -30 }}
+            initial={{ opacity: 0, x: -10 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-            className="w-full overflow-hidden rounded-2xl shadow-[0_8px_40px_rgba(0,0,0,0.2),0_0_60px_rgba(42,157,143,0.15)] md:flex-1"
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.3 }}
+            className="will-change-transform w-full overflow-hidden rounded-2xl shadow-[0_8px_40px_rgba(0,0,0,0.2),0_0_60px_rgba(42,157,143,0.15)] md:flex-1"
           >
             {/* WhatsApp Header */}
             <div className="flex items-center gap-3 bg-[#075E54] px-5 py-3">
@@ -87,11 +87,11 @@ export default function LiveDemo() {
               {chatMessages.map((msg, i) => (
                 <motion.div
                   key={i}
-                  initial={{ opacity: 0, y: 12 }}
+                  initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: 0.2 + i * 0.12 }}
-                  className={`flex ${msg.role === "ai" ? "justify-end" : "justify-start"}`}
+                  viewport={{ once: true, margin: "-100px" }}
+                  transition={{ duration: 0.3, delay: 0.1 + i * 0.05 }}
+                  className={`flex will-change-transform ${msg.role === "ai" ? "justify-end" : "justify-start"}`}
                 >
                   <div className={`max-w-[85%] rounded-lg px-3.5 py-2.5 text-[13.5px] leading-relaxed shadow-sm ${msg.role === "ai" ? "rounded-tr-none bg-[#DCF8C6] text-[#111]" : "rounded-tl-none bg-white text-[#111]"}`}>
                     {msg.role === "guest" && msg.lang && (
@@ -125,9 +125,9 @@ export default function LiveDemo() {
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.5 }}
-            className="flex flex-col items-center justify-center gap-4 px-6 py-6 md:px-12"
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.3, delay: 0.1 }}
+            className="flex flex-col items-center justify-center gap-4 px-6 py-6 md:px-12 will-change-transform"
           >
             <span className="text-center text-sm font-medium leading-tight text-light-gray">
               Bu sırada<br />personelin<br />ekranında...
@@ -145,11 +145,11 @@ export default function LiveDemo() {
 
           {/* RIGHT — Telegram Panel */}
           <motion.div
-            initial={{ opacity: 0, x: 30 }}
+            initial={{ opacity: 0, x: 10 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7, delay: 0.3 }}
-            className="flex w-full flex-col overflow-hidden rounded-2xl shadow-[0_8px_40px_rgba(0,0,0,0.2),0_0_60px_rgba(200,164,90,0.12)] md:flex-1"
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.3, delay: 0.05 }}
+            className="will-change-transform flex w-full flex-col overflow-hidden rounded-2xl shadow-[0_8px_40px_rgba(0,0,0,0.2),0_0_60px_rgba(200,164,90,0.12)] md:flex-1"
           >
             {/* Telegram Header */}
             <div className="flex items-center gap-3 bg-[#2AABEE] px-5 py-3">
@@ -163,11 +163,11 @@ export default function LiveDemo() {
             {/* Telegram Body */}
             <div className="flex flex-1 flex-col justify-center bg-[#0E1621] p-6 md:p-8">
               <motion.div
-                initial={{ opacity: 0, y: 12 }}
+                initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: 0.7 }}
-                className="rounded-xl bg-[#182533] p-5"
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.3, delay: 0.1 }}
+                className="rounded-xl bg-[#182533] p-5 will-change-transform"
               >
                 <div className="mb-3 flex items-center gap-2">
                   <span className="text-lg">🔔</span>
@@ -183,11 +183,11 @@ export default function LiveDemo() {
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, y: 12 }}
+                initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: 0.9 }}
-                className="mt-4 rounded-xl bg-[#182533]/60 p-5"
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.3, delay: 0.15 }}
+                className="mt-4 rounded-xl bg-[#182533]/60 p-5 will-change-transform"
               >
                 <div className="mb-2 flex items-center gap-2">
                   <span className="text-lg">🔔</span>

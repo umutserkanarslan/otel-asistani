@@ -51,11 +51,11 @@ export default function FAQ() {
         <div className="flex flex-col gap-12 md:flex-row md:gap-16 lg:gap-20">
           {/* Left Title — 35% */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-            className="md:w-[35%] md:flex-shrink-0"
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.3 }}
+            className="md:w-[35%] md:flex-shrink-0 will-change-transform"
           >
             <h2 className="font-[family-name:var(--font-heading)] text-3xl font-extrabold text-navy md:text-[40px]">
               Sıkça Sorulan Sorular
@@ -72,11 +72,11 @@ export default function FAQ() {
               return (
                 <motion.div
                   key={i}
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: i * 0.08 }}
-                  className={`border-b border-[#E0DCD5] transition-colors duration-200 ${isOpen ? "bg-[#FDFCF9]" : ""}`}
+                  viewport={{ once: true, margin: "-100px" }}
+                  transition={{ duration: 0.3, delay: i * 0.05 }}
+                  className={`border-b border-[#E0DCD5] transition-colors duration-200 will-change-transform ${isOpen ? "bg-[#FDFCF9]" : ""}`}
                   style={isOpen ? { borderLeft: "3px solid #C8A45A", paddingLeft: "20px" } : { paddingLeft: "23px" }}
                 >
                   <button

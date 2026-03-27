@@ -77,11 +77,11 @@ export default function HowItWorks() {
       <div className="mx-auto max-w-[1200px] px-6">
         {/* Title */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
-          className="mb-16 text-center"
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.3 }}
+          className="mb-16 text-center will-change-transform"
         >
           <h2 className="font-[family-name:var(--font-heading)] text-3xl font-extrabold text-navy md:text-[40px]">
             Nasıl Çalışır?
@@ -105,11 +105,11 @@ export default function HowItWorks() {
           {steps.map((step, i) => (
             <motion.div
               key={step.num}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: i * 0.12 }}
-              className="group relative z-10 flex flex-col items-center rounded-[20px] border border-border-warm bg-white px-7 py-8 text-center shadow-[0_8px_30px_rgba(0,0,0,0.08)] transition-all duration-300 hover:-translate-y-1.5 hover:border-t-[3px] hover:border-t-gold hover:shadow-[0_12px_40px_rgba(0,0,0,0.12)]"
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.3, delay: i * 0.05 }}
+              className="will-change-transform group relative z-10 flex flex-col items-center rounded-[20px] border border-border-warm bg-white px-7 py-8 text-center shadow-[0_8px_30px_rgba(0,0,0,0.08)] transition-all duration-300 hover:-translate-y-1.5 hover:border-t-[3px] hover:border-t-gold hover:shadow-[0_12px_40px_rgba(0,0,0,0.12)]"
             >
               {/* Step Number */}
               <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-full bg-gold font-[family-name:var(--font-heading)] text-base font-bold text-navy shadow-[0_0_0_4px_rgba(200,164,90,0.2)]">

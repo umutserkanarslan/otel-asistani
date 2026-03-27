@@ -79,11 +79,11 @@ export default function Features() {
       <div className="mx-auto max-w-[1200px] px-6">
         {/* Title */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
-          className="mb-16"
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.3 }}
+          className="mb-16 will-change-transform"
         >
           <h2 className="font-[family-name:var(--font-heading)] text-3xl font-extrabold text-navy md:text-[40px]">
             Neden Bu Sistem?
@@ -98,11 +98,11 @@ export default function Features() {
           {features.map((feature, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: i * 0.1 }}
-              className="group flex gap-5 rounded-2xl border border-[#E0DCD5] bg-[#F9F7F3] p-7 shadow-[0_2px_16px_rgba(0,0,0,0.04)] transition-all duration-300 hover:scale-[1.01] hover:border-gold hover:shadow-[0_8px_32px_rgba(0,0,0,0.1)] md:p-7"
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.3, delay: i * 0.05 }}
+              className="will-change-transform group flex gap-5 rounded-2xl border border-[#E0DCD5] bg-[#F9F7F3] p-7 shadow-[0_2px_16px_rgba(0,0,0,0.04)] transition-all duration-300 hover:scale-[1.01] hover:border-gold hover:shadow-[0_8px_32px_rgba(0,0,0,0.1)] md:p-7"
             >
               {/* Icon */}
               <div className="flex h-14 w-14 flex-shrink-0 items-center justify-center rounded-full bg-teal/[0.12]">

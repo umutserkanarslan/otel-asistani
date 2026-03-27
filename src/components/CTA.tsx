@@ -20,10 +20,11 @@ export default function CTA() {
 
       <div className="relative z-10 mx-auto max-w-[700px] px-6 text-center">
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.3 }}
+          className="will-change-transform"
         >
           <h2 className="font-[family-name:var(--font-heading)] text-3xl font-extrabold text-white md:text-[40px] lg:text-[48px]">
             14 Gün Ücretsiz Deneyin, <span className="text-gold">Farkı Görün</span>
@@ -36,11 +37,11 @@ export default function CTA() {
 
         {/* Buttons */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center"
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.3, delay: 0.1 }}
+          className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center will-change-transform"
         >
           <a
             href="https://wa.me/905316745900"
@@ -62,11 +63,11 @@ export default function CTA() {
 
         {/* Trust Indicators */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-          className="mt-12 flex flex-col items-center justify-center gap-6 sm:flex-row sm:gap-10"
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.3, delay: 0.15 }}
+          className="mt-12 flex flex-col items-center justify-center gap-6 sm:flex-row sm:gap-10 will-change-transform"
         >
           {trustItems.map((item, i) => (
             <div key={i} className="flex items-center gap-2.5 text-[15px] text-light-gray">

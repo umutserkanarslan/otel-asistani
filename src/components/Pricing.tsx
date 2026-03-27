@@ -43,11 +43,11 @@ export default function Pricing() {
       <div className="mx-auto max-w-[900px] px-6">
         {/* Title */}
         <motion.div
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
-          className="mb-16 text-center"
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.3 }}
+          className="mb-16 text-center will-change-transform"
         >
           <h2 className="font-[family-name:var(--font-heading)] text-3xl font-extrabold text-navy md:text-[40px]">
             Şeffaf Fiyatlandırma
@@ -62,11 +62,11 @@ export default function Pricing() {
           {plans.map((plan, i) => (
             <motion.div
               key={i}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: i * 0.15 }}
-              className={`relative flex flex-1 flex-col rounded-2xl p-8 transition-all duration-300 md:p-10 ${
+              viewport={{ once: true, margin: "-100px" }}
+              transition={{ duration: 0.3, delay: i * 0.05 }}
+              className={`will-change-transform relative flex flex-1 flex-col rounded-2xl p-8 transition-all duration-300 md:p-10 ${
                 plan.recommended
                   ? "border-2 border-gold bg-white shadow-[0_16px_48px_rgba(0,0,0,0.12)] z-10"
                   : "border border-[#E0DCD5] bg-white shadow-[0_4px_20px_rgba(0,0,0,0.06)]"
@@ -130,11 +130,11 @@ export default function Pricing() {
 
         {/* Trial Badge */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-          className="mt-10 flex justify-center"
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.3, delay: 0.1 }}
+          className="mt-10 flex justify-center will-change-transform"
         >
           <div className="inline-flex items-center gap-2 rounded-full border-l-[3px] border-teal bg-teal/[0.08] px-6 py-2.5 text-sm font-medium text-teal">
             ✨ Beğenmezseniz iptal edin. Ödeme yok

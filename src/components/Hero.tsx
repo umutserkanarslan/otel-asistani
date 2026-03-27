@@ -106,10 +106,10 @@ export default function Hero() {
       <div className="relative z-10 mx-auto flex max-w-[1200px] flex-col items-center gap-12 px-6 pb-12 pt-28 md:flex-row md:gap-8 md:pb-16 md:pt-32 lg:pb-20 lg:pt-36">
         {/* Left Side — Text */}
         <motion.div
-          initial={{ opacity: 0, x: -30 }}
+          initial={{ opacity: 0, x: -10 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.7, ease: "easeOut" }}
-          className="flex-[55] text-center md:text-left"
+          transition={{ duration: 0.3, ease: "easeOut" }}
+          className="flex-[55] text-center md:text-left will-change-transform"
         >
           <span className="mb-6 inline-block rounded-full border border-gold/50 px-4 py-1.5 text-xs font-medium tracking-wide text-gold">
             Butik Oteller İçin
@@ -148,10 +148,10 @@ export default function Hero() {
 
         {/* Right Side — Phone Mockup */}
         <motion.div
-          initial={{ opacity: 0, x: 30 }}
+          initial={{ opacity: 0, x: 10 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
-          className="relative flex-[45]"
+          transition={{ duration: 0.3, ease: "easeOut", delay: 0.1 }}
+          className="relative flex-[45] will-change-transform"
         >
           <div className="pointer-events-none absolute -right-8 -top-8 z-0">
             <svg width="120" height="120" viewBox="0 0 120 120" fill="none">
@@ -178,11 +178,11 @@ export default function Hero() {
       {/* Social Proof Bar — Inside Hero on Navy */}
       <div className="relative z-20 mx-auto max-w-[1200px] px-6 pb-36">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          className="mx-auto flex w-fit flex-col items-center justify-center gap-8 rounded-2xl border border-white/[0.08] bg-white/[0.04] px-10 py-8 backdrop-blur-sm md:flex-row md:gap-0 md:divide-x md:divide-white/[0.15] md:px-10 md:py-7"
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.3, delay: 0.1 }}
+          className="mx-auto flex w-fit flex-col items-center justify-center gap-8 rounded-2xl border border-white/[0.08] bg-white/[0.04] px-10 py-8 backdrop-blur-sm md:flex-row md:gap-0 md:divide-x md:divide-white/[0.15] md:px-10 md:py-7 will-change-transform"
         >
           {metrics.map((metric, i) => (
             <div key={i} className="flex flex-col items-center gap-2 px-6 md:px-12 lg:px-16">
