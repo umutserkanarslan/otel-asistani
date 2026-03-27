@@ -43,7 +43,7 @@ export default function CTA() {
           className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center"
         >
           <a
-            href="https://wa.me/905XXXXXXXXX"
+            href="https://wa.me/905316745900"
             className="inline-flex items-center gap-2.5 rounded-xl bg-gold px-8 py-4 text-base font-bold text-navy shadow-lg transition-all duration-300 hover:scale-[1.03] hover:shadow-[0_0_28px_rgba(200,164,90,0.45)]"
           >
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -53,7 +53,7 @@ export default function CTA() {
             Ücretsiz Deneyin
           </a>
           <a
-            href="tel:+90534XXXXXXX"
+            href="tel:+905316745900"
             className="inline-flex items-center gap-2.5 rounded-xl border border-white/30 px-8 py-4 text-base font-semibold text-white transition-all duration-300 hover:border-white hover:bg-white hover:text-navy"
           >
             📞 Hemen Arayın
